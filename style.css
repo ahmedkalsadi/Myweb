@@ -3,8 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: 'Open Sans', sans-serif;
-}
+    font-family: 'Roboto', sans-serif;}
 html{
     scroll-behavior: smooth;
     background: #000000;
@@ -28,6 +27,12 @@ html{
     max-width: 1300px;
     padding: 0;
     margin: auto;
+}
+.menu-btn{
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
 }
 section{
     padding-top: 100px;
@@ -59,6 +64,7 @@ section{
     display: inline-block;
 }
 .navbar .menu li a {
+    display: block;
     color: #eee;
     font-size: 20px;
     font-weight: 600;
@@ -69,10 +75,13 @@ section{
     color: #f0ab18;
     
 }
+
+
+            
 /* Home styling */
 .home{
     display: block;
-    background: url(bg.jpg) ;
+    background: url(images/bg.jpg) ;
     height: 100vh;
     min-height: 500px;
 }
@@ -87,10 +96,11 @@ section{
 .about-content{
     display: block;
     align-items: center;
+    text-align: center;
 }
 .about .title{
     color: #eee;
-    font-family: 'Inspiration', cursive;
+    font-family: 'Indie Flower', cursive;
     text-align: center;
     font-size: 80px;
     padding-bottom: 20px;
@@ -101,8 +111,27 @@ section{
     text-align:justify;
     padding-left: 150px;
     padding-right: 150px;
+    animation-duration: 2s;
+    animation-name: slidein;
 }
-
+  
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    75% {
+      font-size: 300%;
+      margin-left: 25%;
+      width: 150%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
 
 /* pro styling */
 .projects{
@@ -113,14 +142,17 @@ section{
 }
 .projects .title{
     color: #eee;
-    font-family: 'Inspiration', cursive;
+    font-family: 'Indie Flower', cursive;
     text-align: center;
     font-size: 80px;
     padding-bottom: 20px;
 }
+.projects ,.projects-content{
+    text-align: center;
+}
 .projects .projects-content .card{
     display: inline-block;
-    width:calc(33% - 40px);
+    width:calc(33% - 30px);
     background: #000000;    ;
     /* border-radius: 6px; */
     padding: 20px 25px;
@@ -130,20 +162,20 @@ section{
 }
 .projects .projects-content .card:hover{
     color: rgb(0, 0, 0);
-    
-    width: 36%;
-    background: rgb(255, 255, 255);
+    transform: scale(1.05);
+
 }
 .projects .projects-content .card .box{
     transition: all 0.3s ease;
 }
-.services .serv-content .card:hover .box{
+.projects .projects-content .card:hover .box{
     transform: scale(1.05);
 }
 .projects .projects-content .card .fit-img {
-    width: 200px;
+    width: 300px;
 }
 .projects .projects-content .card .textpro{
+    color: white;
     font-size: 25px;
     font-weight: bold;
     margin: 10px 0 7px 0;
@@ -160,6 +192,7 @@ section{
 }
 .photo .title{
     color: #eee;
+    font-family: 'Indie Flower', cursive;
     text-align: center;
     font-size: 40px;
     padding-bottom: 20px;
@@ -184,8 +217,73 @@ section{
 }
 .contact .title{
     color: #eee;
-    font-family: 'Inspiration', cursive;
+    font-family: 'Indie Flower', cursive;
     text-align: center;
     font-size: 80px;
     padding-bottom: 20px;
+}
+
+@media (max-width: 947px){
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "";
+    }
+    .navbar {
+        padding: 10px 40px 10px 60px;
+        opacity: 90%;
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: black;
+
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .about .about-content {
+        text-align: center;
+    }
+
+    .about .projects-content div {
+        text-align: center;
+    }
+    .about .projects-content .card{
+        display: inline-block;
+        width:80%;
+        background: #000000;    ;
+        /* border-radius: 6px; */
+        padding: 20px 25px;
+        border: 5px outset #ffffff;
+        border-radius:  40px;
+        margin-top: 20px;
+    }
+    
+    .about .projects-content .card .box{
+        transition: all 0.3s ease;
+    }
+    .about .projects-content .card:hover .box{
+        transform: scale(1.05);
+    }
+    .photo .photo-content img {
+        display: block;
+        width:100%;
+    }
 }
