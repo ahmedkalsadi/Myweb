@@ -5,24 +5,45 @@
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
 }
-.max-width {
-    max-width: 1300px;
-    padding: 0 80px 0 20px;
-    margin: auto;
+html{
+    scroll-behavior: smooth;
+    background: #000000;
+}
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(0, 0, 0);
 }
 
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(255, 255, 255);
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0;
+    margin: auto;
+}
+section{
+    padding-top: 100px;
+}
 /* NAV STYLING */
 .navbar{
     position: fixed;
     width: 100%;
     /*background: black;*/
+    background: none;
     z-index: 999;
-    padding: 5px 20px 5px 20px;
+    padding: 10px 180px 10px 60px;
     transition: all 0.3s cubic-bezier(0.25, 0.1, 0.39, 1.03);
-}
-.navbar .sticky{
-    padding-top: 5px;
-    background: rgb(255, 255, 255);
+} 
+.navbar.sticky{
+    background: rgb(0, 0, 0);
     
 }
 .navbar .max-width{
@@ -31,7 +52,7 @@
     justify-content:space-between;
 }
 .navbar .logo img{
-    width: 40px;
+    width: 50px;
 }
 .navbar .menu li{
     list-style: none;
@@ -39,7 +60,7 @@
 }
 .navbar .menu li a {
     color: #eee;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     margin-left: 30px;
     transition: color 0.3 ease;
@@ -50,56 +71,68 @@
 }
 /* Home styling */
 .home{
-    display: flex;
-    background: url(back1.jpg);
+    display: block;
+    background: url(images/bg.jpg) ;
     height: 100vh;
     min-height: 500px;
 }
-
-
+.home .home-content img{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
 
 
 /* About styling */
-section{
-    padding: 80px    0;
+.about-content{
+    display: block;
+    align-items: center;
 }
 .about .title{
+    color: #eee;
+    font-family: 'Inspiration', cursive;
     text-align: center;
-    font-size: 40px;
+    font-size: 80px;
     padding-bottom: 20px;
 }
 .about .about-content .text{
+    color: #eee;
     font-size: 25px;
-    text-align: justify;
-    padding-left: 100px;
-    padding-right: 80px
+    text-align:justify;
+    padding-left: 150px;
+    padding-right: 150px;
 }
 
 
 /* pro styling */
 .projects{
-    background: url(images/back1.jpg) ;
     height: 80vh;
 }
 .projects .max-width {
     padding:0 40px 0 40px ;
 }
 .projects .title{
+    color: #eee;
+    font-family: 'Inspiration', cursive;
     text-align: center;
-    font-size: 40px;
+    font-size: 80px;
     padding-bottom: 20px;
 }
 .projects .projects-content .card{
     display: inline-block;
     width:calc(33% - 40px);
-    background: #D3D3D3;    ;
-    border-radius: 6px;
+    background: #000000;    ;
+    /* border-radius: 6px; */
     padding: 20px 25px;
+    border: 5px outset #ffffff;
+    border-radius:  40px;
     margin-top: 20px;
 }
 .projects .projects-content .card:hover{
-    color: #eee;
-    background: gray;
+    color: rgb(0, 0, 0);
+    
+    width: 36%;
+    background: rgb(255, 255, 255);
 }
 .projects .projects-content .card .box{
     transition: all 0.3s ease;
@@ -126,6 +159,7 @@ section{
     padding:0 40px 0 40px ;
 }
 .photo .title{
+    color: #eee;
     text-align: center;
     font-size: 40px;
     padding-bottom: 20px;
@@ -135,11 +169,23 @@ section{
 }
 .photo .photo-content img {
     display: inline-block;
-    width:calc(33% - 10px);
+    width:calc(25% - 10px);
     padding: 20px 25px;
     margin-top: 20px;
-    opacity: 90%;
+    opacity: 80%;
 }
 .photo .photo-content img:hover{
     opacity: 100%;
+}
+
+
+.contact{
+    display: block;
+}
+.contact .title{
+    color: #eee;
+    font-family: 'Inspiration', cursive;
+    text-align: center;
+    font-size: 80px;
+    padding-bottom: 20px;
 }
