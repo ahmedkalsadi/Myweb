@@ -81,7 +81,7 @@ section{
 /* Home styling */
 .home{
     display: block;
-    background: url(images/bg.jpg) ;
+    background: url(bg.jpg) no-repeat  ;
     height: 100vh;
     min-height: 500px;
 }
