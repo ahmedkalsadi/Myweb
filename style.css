@@ -81,7 +81,7 @@ section{
 /* Home styling */
 .home{
     display: block;
-    background: url(bg.jpg) ;
+    background: url(images/bg.jpg) ;
     height: 100vh;
     min-height: 500px;
 }
@@ -249,7 +249,6 @@ footer{
         left: -100%;
         top: 0;
         background: black;
-
         text-align: center;
         padding-top: 80px;
         transition: all 0.3s ease;
@@ -268,29 +267,48 @@ footer{
     .about .about-content {
         text-align: center;
     }
-
-    .about .projects-content div {
+    .projects .projects-content div {
         text-align: center;
     }
-    .about .projects-content .card{
+    .projects .projects-content .card{
         display: inline-block;
         width:80%;
         background: #000000;    ;
         /* border-radius: 6px; */
-        padding: 20px 25px;
+        padding: 20px ;
         border: 5px outset #ffffff;
         border-radius:  40px;
         margin-top: 20px;
     }
     
-    .about .projects-content .card .box{
+    .projects .projects-content .card .box{
         transition: all 0.3s ease;
     }
-    .about .projects-content .card:hover .box{
+    .projects .projects-content .card:hover .box{
         transform: scale(1.05);
     }
     .photo .photo-content img {
         display: block;
         width:100%;
     }
+}
+
+@media (max-width: 450px){
+    .navbar {
+        padding: 10px 45px 10px 30px;
+        opacity: 90%;
+    }
+    .about .about-content .text {
+        color: #eee;
+        font-size: 18px;
+        text-align: justify;
+        padding-left: 40px;
+        padding-right: 40px;
+        animation-duration: 2s;
+        animation-name: slidein;
+    }
+    .photo .title{
+        padding-top: 70px;
+    }
+    
 }
