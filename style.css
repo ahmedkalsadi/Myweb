@@ -81,7 +81,7 @@ section{
 /* Home styling */
 .home{
     display: block;
-    background: url(images/bg.jpg) ;
+    background: url(bg.jpg) ;
     height: 100vh;
     min-height: 500px;
 }
@@ -221,6 +221,13 @@ section{
     text-align: center;
     font-size: 80px;
     padding-bottom: 20px;
+}
+
+footer{
+    background: black;
+    padding: 15px 23px;
+    color: #fff;
+    text-align: center;
 }
 
 @media (max-width: 947px){
