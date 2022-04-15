@@ -81,7 +81,7 @@ section{
 /* Home styling */
 .home{
     display: block;
-    background: url(Antalya/20210313162348_IMG_8785-01.jpeg)no-repeat center fixed ;
+    background: url(images/20210313162348_IMG_8785-01.jpeg)no-repeat center fixed ;
     background-size: 1366px;
     height: 100vh;
     min-height: 400px;
