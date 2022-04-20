@@ -8,6 +8,7 @@ html{
     scroll-behavior: smooth;
     background: #000000;
 }
+
 /* custom scroll bar */
 ::-webkit-scrollbar {
     width: 10px;
@@ -81,7 +82,7 @@ section{
 /* Home styling */
 .home{
     display: block;
-    background: url(images/20210313162348_IMG_8785-01.jpeg)no-repeat center fixed ;
+    /* background: url(Antalya/20210313162348_IMG_8785-01.jpeg) no-repeat center fixed ; */
     background-size: 1366px;
     height: 100vh;
     min-height: 400px;
@@ -106,12 +107,27 @@ section{
     font-size: 60px;
     padding-bottom: 20px;
 }
+.about .together{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.about .perimg{
+    display: flex;
+    padding: 40px;
+}
+.about .perimg img{
+    text-align: center;
+    width: 250px;
+    border-radius: 100px;
+}
 .about .about-content .text{
     color: #eee;
     font-size: 24px;
     text-align:justify;
-    padding-left: 175px;
-    padding-right: 175px;
+    padding-left: 55px;
+    padding-right: 100px;
     /* animation-duration: 2s;
     animation-name: slidein; */
 }
@@ -133,7 +149,6 @@ section{
       width: 100%;
     }
   }
-
 /* pro styling */
 .projects{
     height: 80vh;
@@ -235,7 +250,7 @@ section{
 }
 .contact .contact-content .left-contact {
     color: #eee;
-    font-size: 40px;
+    font-size: 24px;
     padding-left: 65px;
 
     /* font-family: 'Indie Flower', cursive; */
@@ -356,10 +371,23 @@ footer{
         animation-duration: 2s;
         animation-name: slidein;
     }
+    .about .together {
+        display: block;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .about .perimg {
+        display: block;
+        padding: 40px;
+    }
     
     
 }
-@media (max-width: 300px){
+@media (max-width: 450px){
+    section{
+        padding-top: 80px;
+    }
     .navbar {
         padding: 10px 45px 10px 30px;
         opacity: 90%;
@@ -368,7 +396,7 @@ footer{
         color: #eee;
         /* font-family: 'Indie Flower', cursive; */
         text-align: center;
-        font-size: 20px;
+        font-size: 40px;
         padding-bottom: 20px;
     }
     .about .about-content .text {
@@ -380,6 +408,63 @@ footer{
         animation-duration: 2s;
         animation-name: slidein;
     }
+    .photo .title {
+        color: #eee;
+        /* font-family: 'Indie Flower', cursive; */
+        text-align: center;
+        font-size: 40px;
+        padding-bottom: 20px;
+    }
+    .contact{
+        display: block;
+        height: 40vh;
+    }
     
+    .contact .title{
+        color: #eee;
+        /* font-family: 'Indie Flower', cursive; */
+        text-align: center;
+        font-size: 35px;
+        padding: 0px 15px 20px 15px     ;
+    }
     
+     .contact-content {
+        display: inline-block;
+        text-align: center;
+        align-items: end;
+    }
+    .contact .contact-content .left-contact {
+        color: #eee;
+        font-size: 18px;
+        text-align: left;
+        padding-left: 20px;
+        /* font-family: 'Indie Flower', cursive; */
+    }
+    .contact .contact-content .left-contact h2{
+        color: white;
+        font-size: 24px;
+        text-align: center;
+        
+    }
+
+    .contact .contact-content h3 {
+        color: white;
+        font-size: 18px;
+        padding-left: 10px;
+        /* padding: 10px; */  
+    }
+    .contact .social-media{
+        display: block;
+        text-align: center;
+        margin-top: 40px;
+        padding-left: 45px;
+    }
+    .contact .social-media img {
+        display: inline-block;
+        width: 60px;
+        padding-right: 25px;
+    }
+
+
 }
+
