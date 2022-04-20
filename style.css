@@ -381,7 +381,11 @@ footer{
         display: block;
         padding: 40px;
     }
-    
+    .about .perimg img{
+        text-align: center;
+        width: 250px;
+        border-radius: 100px;
+    }
     
 }
 @media (max-width: 450px){
@@ -464,7 +468,5 @@ footer{
         width: 60px;
         padding-right: 25px;
     }
-
-
 }
 
